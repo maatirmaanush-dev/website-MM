@@ -4,26 +4,25 @@ import { NEW_DROPS_PATH } from '@/lib/site-links'
 
 export function Hero() {
   return (
-    <section className="relative h-screen min-h-[600px] overflow-hidden bg-earth-900">
+    <section className="relative lg:items-end lg:justify-start flex items-end justify-end h-screen min-h-[600px] overflow-hidden bg-earth-900">
       {/* Background image */}
-      <div className="absolute inset-0">
+      <div className="absolute top-[70px] inset-0">
         <ImageWithFallback
           src="/images/hero/landing-main.png"
           alt="Maatir Maanush — Handcrafted Kantha"
           fill
           className="object-cover"
-          style={{ objectPosition: '65% top' }}
+          style={{ objectPosition: '55% top' }}
           priority
           fallbackBg="#4A3020"
           fallbackAccent="#C4956A"
         />
         {/* Darkening layers */}
-        <div className="absolute inset-0 bg-gradient-to-t from-earth-900/80 via-earth-900/20 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-earth-900/50 via-earth-900/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t lg:from-earth-900/70 lg:via-earth-900/20 lg:to-transparent from-earth-900/90 via-earth-900/40 to-earth-900/10" />
       </div>
 
       {/* Vertically centred text block */}
-      <div className="absolute inset-0 z-10 flex items-center px-8 lg:px-14">
+      <div className="pb-24 inset-0 z-10 flex items-center px-8 lg:px-14">
         <div className="max-w-xl">
           {/* Eyebrow */}
           <p className="text-[10px] tracking-[0.35em] uppercase text-beige-50/50 font-sans mb-5">
