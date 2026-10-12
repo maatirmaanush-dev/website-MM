@@ -4,7 +4,7 @@ import { NEW_DROPS_PATH } from '@/lib/site-links'
 
 export function Hero() {
   return (
-    <section className="relative lg:items-end lg:justify-start flex items-end justify-end h-screen min-h-[600px] overflow-hidden bg-earth-900">
+    <section className="relative lg:items-end lg:justify-start md:justify-center flex items-end justify-end h-screen min-h-[600px] overflow-hidden bg-earth-900">
       {/* Background image */}
       <div className="absolute top-[70px] inset-0">
         <ImageWithFallback
