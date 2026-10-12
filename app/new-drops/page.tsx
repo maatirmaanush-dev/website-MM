@@ -23,12 +23,47 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const ALL_CATEGORIES = [
-  { label: 'Sarees',           href: '/kantha-stitch-sarees',       dbCategory: 'Kantha Stitch Sarees', description: 'Handwoven Kantha stitch sarees in Gacchi Tussar and Katan silk',                    image: '/images/categories/saree-hero.png', pinnedImage: '/images/categories/saree-hero.png' },
-  { label: 'Jackets',          href: '/kantha-embroidered-jackets',  dbCategory: 'Kantha Jackets',        description: 'Statement Kantha jackets — patchwork, embroidered, one-of-a-kind',                   image: '/images/categories/jacket.png' },
-  { label: 'Kaftans',          href: '/kaftans-for-women',           dbCategory: 'Kaftans',               description: 'Loose, draped Kantha kaftans in handwoven silk',                                     image: '/images/categories/kaftan-hero.png', pinnedImage: 'https://lyzgaopdbughrobqkosv.supabase.co/storage/v1/object/public/product-images/silk-kaftan-for-women-divine-threads-01.jpg' },
-  { label: 'Kurtas',           href: '/kantha-embroidered-kurtas',   dbCategory: 'Kurtas',                description: 'Everyday Kantha kurtas — refined, handcrafted, effortlessly wearable',               image: '/images/categories/kurta.png'  },
-  { label: 'Dresses',          href: '/contemporary-womens-wear',    dbCategory: 'Dresses',               description: 'Contemporary Kantha dresses — modern silhouettes rooted in heritage craft',           image: '/images/categories/kaftan.png', pinnedImage: 'https://lyzgaopdbughrobqkosv.supabase.co/storage/v1/object/public/product-images/modern-kantha-jacket-dress-maatir-manjari-01.jpg' },
-  { label: 'Limited Editions', href: '/limited-editions-clothing',   dbCategory: 'Limited Editions',      description: 'Rare, collectible pieces — heirloom-worthy artistry in very limited quantities',      image: '/images/categories/saree.png'  },
+  { label: 'Sarees',           
+    href: '/kantha-stitch-sarees',       
+    dbCategory: 'Kantha Stitch Sarees', 
+    description: 'Handwoven Kantha stitch sarees in Gacchi Tussar and Katan silk',                    
+    image: '/images/reshuffle/saree-hero.png', 
+    pinnedImage: '/images/reshuffle/saree-hero.png' },
+
+  { label: 'Jackets',          
+    href: '/kantha-embroidered-jackets',  
+    dbCategory: 'Kantha Jackets',        
+    description: 'Statement Kantha jackets — patchwork, embroidered, one-of-a-kind',                   
+    image: '/images/reshuffle/jackets-hero.png',
+    pinnedImage: '/images/reshuffle/jackets-hero.png' },
+
+  { label: 'Kaftans',          
+    href: '/kaftans-for-women',           
+    dbCategory: 'Kaftans',               
+    description: 'Loose, draped Kantha kaftans in handwoven silk',                                     
+    image: '/images/reshuffle/kaftans-hero.jpeg', 
+    pinnedImage: '/images/reshuffle/kaftans-hero.jpeg'},
+
+  { label: 'Kurtas',           
+    href: '/kantha-embroidered-kurtas',   
+    dbCategory: 'Kurtas',                
+    description: 'Everyday Kantha kurtas — refined, handcrafted, effortlessly wearable',               
+    image: '/images/reshuffle/kurta-hero.jpeg',
+    pinnedImage: '/images/reshuffle/kurta-hero.jpeg'  },
+
+  { label: 'Dresses',          
+    href: '/contemporary-womens-wear',    
+    dbCategory: 'Dresses',               
+    description: 'Contemporary Kantha dresses — modern silhouettes rooted in heritage craft',           
+    image: '/images/reshuffle/dresses-hero.jpeg', 
+    pinnedImage: '/images/reshuffle/dresses-hero.jpeg' },
+
+  { label: 'Limited Editions', 
+    href: '/limited-editions-clothing',   
+    dbCategory: 'Limited Editions',      
+    description: 'Rare, collectible pieces — heirloom-worthy artistry in very limited quantities',      
+    image: '/images/reshuffle/lim-edi-hero.jpeg', 
+    pinnedImage: '/images/reshuffle/lim-edi-hero.jpeg'  },
 ]
 
 export default async function NewDropsPage() {

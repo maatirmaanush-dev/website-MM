@@ -33,7 +33,7 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
-      <FeaturedCollections />
+      {/* <FeaturedCollections /> */}
       <NewDropsSection />
       <UnboxingOurselves />
       <BrandEthos />
