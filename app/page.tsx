@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { getSeoByPath } from '@/lib/actions/seo'
 import { Hero } from '@/components/home/Hero'
-import { FeaturedCollections } from '@/components/home/FeaturedCollections'
+// import { FeaturedCollections } from '@/components/home/FeaturedCollections'
 import { NewDropsSection } from '@/components/home/NewDropsSection'
 import { UnboxingOurselves } from '@/components/home/UnboxingOurselves'
 import { BrandEthos } from '@/components/home/BrandEthos'
