@@ -12,7 +12,7 @@ const ALL_CATEGORIES = [
   { label: 'Kurtas',           href: '/kantha-embroidered-kurtas',   dbCategory: 'Kurtas',                image: '/images/reshuffle/kurta-hero.jpeg', pinnedImage: '/images/reshuffle/kurta-hero.jpeg' },
   { label: 'Dresses',          href: '/contemporary-womens-wear',    dbCategory: 'Dresses',               image: '/images/reshuffle/dresses-hero.jpeg', pinnedImage: '/images/reshuffle/dresses-hero.jpeg' },
   { label: 'Limited Editions', href: '/limited-editions-clothing',   dbCategory: 'Limited Editions',      image: '/images/reshuffle/lim-edi-hero.jpeg', pinnedImage: '/images/reshuffle/lim-edi-hero.jpeg' },
-  { label: 'Skirts', href: '/skirt-collection',   dbCategory: 'Skirts',      image: '/images/reshuffle/skirt-hero.jpeg', pinnedImage: '/images/reshuffle/skirt-hero.jpeg' },
+  { label: 'Skirts', href: '/skirts',   dbCategory: 'Skirts',      image: '/images/reshuffle/skirt-hero.jpeg', pinnedImage: '/images/reshuffle/skirt-hero.jpeg' },
 ]
 
 export async function NewDropsSection() {
