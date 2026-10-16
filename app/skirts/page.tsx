@@ -71,8 +71,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function LimitedEditionsPage() {
   const all = await getProducts()
   const filtered = all.filter((p: any) => p.published && p.category === 'Skirts')
-  const h1 = 'Limited Edition Clothing for Women'
-  const h2 = 'Limited Edition Pieces with Timeless Appeal'
+  const h1 = 'Kantha Skirts for Women'
+  const h2 = 'Limited Edition Skirt Pieces with Timeless Appeal'
 
   return (
     <main className="min-h-screen bg-beige-50 pt-20 sm:pt-32 pb-12 sm:pb-24 px-6 lg:px-10">
@@ -80,7 +80,7 @@ export default async function LimitedEditionsPage() {
         <div className="mb-14">
           <p className="text-xs tracking-[0.2em] uppercase text-earth-500 font-sans mb-2">
             <Link href={NEW_DROPS_PATH} className="hover:text-earth-900 transition-colors">New Drops</Link>
-            <span className="mx-2">&middot;</span>Limited Editions
+            <span className="mx-2">&middot;</span>Kantha Skirts
           </p>
           <h1 className="font-serif text-[34px] md:text-[35px] text-earth-900 mb-3">{h1}</h1>
           <h2 className="font-serif italic text-earth-600 text-lg mb-4">{h2}</h2>

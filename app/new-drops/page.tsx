@@ -64,6 +64,12 @@ const ALL_CATEGORIES = [
     description: 'Rare, collectible pieces — heirloom-worthy artistry in very limited quantities',      
     image: '/images/reshuffle/lim-edi-hero.jpeg', 
     pinnedImage: '/images/reshuffle/lim-edi-hero.jpeg'  },
+  { label: 'Skirts', 
+    href: '/skirts',   
+    dbCategory: 'Skirts',      
+    description: 'Flowing Kantha skirts — floor-length and knee-length silhouettes',      
+    image: '/images/reshuffle/skirt-hero.jpeg', 
+    pinnedImage: '/images/reshuffle/skirt-hero.jpeg'  },
 ]
 
 export default async function NewDropsPage() {
