@@ -52,7 +52,7 @@ const staticRoutes: Entry[] = [
   { path: '/kaftans-for-women', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/contemporary-womens-wear', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/limited-editions-clothing', priority: 0.8, changeFrequency: 'weekly' },
-  { path: '/kantha-coats', priority: 0.8, changeFrequency: 'weekly' },
+  // { path: '/kantha-coats', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/tops', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/skirts', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/sold-out', priority: 0.5, changeFrequency: 'weekly' },
