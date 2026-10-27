@@ -10,6 +10,7 @@ import { ProductImageGallery } from '@/components/products/ProductImageGallery'
 import { WhatsAppEnquire } from '@/components/shared/WhatsAppEnquire'
 import { ChevronRight } from 'lucide-react'
 import { NEW_DROPS_PATH } from '@/lib/site-links'
+import { formatIndianCurrency } from '@/lib/format-price'
 
 const BASE = 'https://www.maatirmaanush.com'
 
@@ -61,11 +62,13 @@ export function createProductDetailPage(category: string) {
     // Adapt snake_case DB fields to component-friendly shape
     const adapted = {
       ...product,
-      priceDisplay: product.price_display,
+      priceDisplay: formatIndianCurrency(product.price_display),
       shortDescription: product.short_description,
       careInstructions: product.care_instructions || [],
       images: product.images || [],
     }
+
+    console.log('Price display', adapted.priceDisplay)
 
     return (
       <main className="min-h-screen bg-beige-50 pt-28 pb-32 sm:pb-40 px-6 lg:px-10">
