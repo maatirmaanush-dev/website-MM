@@ -3,7 +3,6 @@ import { cn } from '@/lib/utils'
 interface SectionHeadingProps {
   eyebrow?: string
   title: string
-  subtitle?: string
   centered?: boolean
   className?: string
   /**
@@ -17,7 +16,6 @@ interface SectionHeadingProps {
 export function SectionHeading({
   eyebrow,
   title,
-  subtitle,
   centered = false,
   className,
   as: Heading = 'h2',
