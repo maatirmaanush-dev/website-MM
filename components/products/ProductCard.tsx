@@ -61,7 +61,7 @@ export function ProductCard({ product, cta = 'enquire', priority = false }: Prod
       {/* Image */}
       <Link href={getProductUrl(product)} className="block">
         <div
-          className="relative aspect-[3/4] overflow-hidden rounded-sm mb-4"
+          className="relative w-[23vw] aspect-[3/4] overflow-hidden rounded-sm mb-4"
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
         >
@@ -69,7 +69,7 @@ export function ProductCard({ product, cta = 'enquire', priority = false }: Prod
             src={product.images[idx]}
             alt={product.name}
             fill
-            className={`object-cover object-top transition-all duration-500 ease-premium ${soldOut ? 'grayscale-[40%] opacity-80' : ''}`}
+            className={`object-cover transition-all duration-500 ease-premium ${soldOut ? 'grayscale-[40%] opacity-80' : ''}`}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             priority={priority && idx === 0}
             fallbackLabel={product.name}
@@ -124,11 +124,11 @@ export function ProductCard({ product, cta = 'enquire', priority = false }: Prod
 
       {/* Info */}
       <div className="flex flex-col gap-2 flex-1">
-        <p className="text-xs tracking-[0.15em] uppercase text-earth-500 font-sans">
+        {/* <p className="text-xs tracking-[0.15em] uppercase text-earth-500 font-sans">
           {product.category}
-        </p>
+        </p> */}
         <Link href={getProductUrl(product)}>
-          <h3 className="font-serif text-lg text-earth-900 leading-snug hover:text-earth-700 transition-colors duration-200">
+          <h3 className="font-sans text-sm text-earth-900 leading-snug hover:text-earth-700 transition-colors duration-200">
             {product.name}
           </h3>
         </Link>

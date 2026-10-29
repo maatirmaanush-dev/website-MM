@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import { getSeoByPath } from '@/lib/actions/seo'
 import { Hero } from '@/components/home/Hero'
-// import { FeaturedCollections } from '@/components/home/FeaturedCollections'
+import { FeaturedCollections } from '@/components/home/FeaturedCollections'
 import { NewDropsSection } from '@/components/home/NewDropsSection'
 import { UnboxingOurselves } from '@/components/home/UnboxingOurselves'
 import { BrandEthos } from '@/components/home/BrandEthos'
+import { PromoBanner } from '@/components/home/PromoBanner'
 import { CraftProcess } from '@/components/home/CraftProcess'
 import { GalleryStrip } from '@/components/home/GalleryStrip'
 import { HomeBlog } from '@/components/home/HomeBlog'
@@ -33,7 +34,8 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
-      {/* <FeaturedCollections /> */}
+      <FeaturedCollections />
+      <PromoBanner />
       <NewDropsSection />
       <UnboxingOurselves />
       <BrandEthos />

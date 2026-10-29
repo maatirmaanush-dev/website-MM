@@ -25,18 +25,13 @@ export function SectionHeading({
   return (
     <div className={cn(centered && 'text-center', className)}>
       {eyebrow && (
-        <p className="text-xs tracking-[0.2em] uppercase text-earth-500 font-sans mb-3">
+        <p className="text-xs tracking-[0.2em] uppercase text-earth-500 font-sans mb-2">
           {eyebrow}
         </p>
       )}
-      <Heading className="font-serif text-[34px] md:text-[35px] text-earth-900 leading-tight">
+      <Heading className="font-serif text-[48px] md:text-[32px] text-[#511306] leading-tight">
         {title}
       </Heading>
-      {subtitle && (
-        <p className="mt-4 text-base text-earth-700 font-sans leading-relaxed max-w-xl">
-          {subtitle}
-        </p>
-      )}
     </div>
   )
 }

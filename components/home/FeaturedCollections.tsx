@@ -12,8 +12,12 @@ export async function FeaturedCollections() {
   if (featured.length === 0) return null
 
   return (
-    <section className="py-12 sm:py-24 px-6 lg:px-10 max-w-7xl mx-auto">
-      <AnimatedReveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-8 sm:mb-14">
+    <section className="relative py-12 sm:py-24 px-10 mx-auto overflow-hidden max-w-[1600px]">
+      <div className="absolute top-0 left-0 w-full h-full diwali-background">
+        <img src="/images/diwali/elements/corner-designs.png" alt="Diwali background" className="absolute z-[-1] top-[-200px] right-[-200px] w-[30vw] opacity-50 object-cover object-center" />
+        {/* <img src="/images/diwali/elements/corner-designs.png" alt="Diwali background" className="absolute bottom-[-100px] left-[-100px] opacity-50 w-[15vw] z-[-1] object-cover object-center" /> */}
+      </div>
+      <AnimatedReveal className="flex flex-row items-end justify-between gap-6 mb-8 sm:mb-14">
         <SectionHeading
           eyebrow="Curated"
           title="From Our Collections"
@@ -21,13 +25,13 @@ export async function FeaturedCollections() {
         />
         <Link
           href={NEW_DROPS_PATH}
-          className="text-sm font-sans text-earth-700 hover:text-earth-900 underline underline-offset-4 transition-colors duration-200 shrink-0"
+          className="text-[12px] bg-[#511306] border border-[#511306] rounded-sm px-4 py-2 font-sans text-[#f5f7f4] hover:bg-[#51130678] transition-colors duration-200 shrink-0"
         >
           View all pieces →
         </Link>
       </AnimatedReveal>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-14">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-14">
         {featured.map((product: any, i: number) => (
           <AnimatedReveal key={product.id} delay={i * 100}>
             <ProductCard product={product} cta="know-more" />
