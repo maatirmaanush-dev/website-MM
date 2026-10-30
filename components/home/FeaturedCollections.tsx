@@ -17,11 +17,10 @@ export async function FeaturedCollections() {
         <img src="/images/diwali/elements/corner-designs.png" alt="Diwali background" className="absolute z-[-1] top-[-200px] right-[-200px] w-[30vw] opacity-50 object-cover object-center" />
         {/* <img src="/images/diwali/elements/corner-designs.png" alt="Diwali background" className="absolute bottom-[-100px] left-[-100px] opacity-50 w-[15vw] z-[-1] object-cover object-center" /> */}
       </div>
-      <AnimatedReveal className="flex flex-row items-end justify-between gap-6 mb-8 sm:mb-14">
+      <AnimatedReveal className="flex flex-col items-center justify-center gap-6 mb-8 sm:mb-14">
         <SectionHeading
           eyebrow="Curated"
           title="From Our Collections"
-          subtitle="Each piece takes weeks to complete. Each stitch is placed by hand."
         />
         <Link
           href={NEW_DROPS_PATH}

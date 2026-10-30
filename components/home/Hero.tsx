@@ -3,31 +3,31 @@ import { Link } from 'lucide-react'
 
 export function Hero() {
   return (
-    <section className="relative lg:items-end lg:justify-start md:justify-center flex items-end justify-end min-h-[600px] overflow-hidden bg-earth-900">
+    <section className="relative lg:items-end lg:justify-start md:justify-center flex items-end justify-end overflow-hidden bg-earth-900">
       {/* Background image */}
-      <div className="absolute top-[0px] inset-0">
+      <div className="flex max-w-full w-full aspect-[9/16] lg:aspect-[16/9]">
         <ImageWithFallback
-          src="/images/diwali/banners/diwali-banner.png"
+          src="/images/diwali/banners/diwali-banner2.png"
           alt="Maatir Maanush — Handcrafted Kantha"
           fill
-          className="hidden sm:block"
-          style={{ objectPosition: '70% 50%' }}
+          className="object-contain w-full h-full hidden sm:block"
+          style={{ objectPosition: '70% top' }}
           priority
           fallbackBg="#4A3020"
           fallbackAccent="#C4956A"
         />
         <ImageWithFallback
-          src="/images/hero/mob-promo-banner.png"
+          src="/images/diwali/banners/mob-diwali-banner3.png"
           alt="Maatir Maanush — Handcrafted Kantha"
           fill
           className="object-cover block sm:hidden"
-          style={{ objectPosition: '55% top' }}
+          style={{ objectPosition: '55% 50%' }}
           priority
           fallbackBg="#4A3020"
           fallbackAccent="#C4956A"
         />
         {/* Darkening layers */}
-        <div className="absolute inset-0 bg-gradient-to-t lg:from-earth-900/70 lg:via-earth-900/20 lg:to-transparent from-earth-900/90 via-earth-900/40 to-earth-900/10" />
+        <div className="absolute inset-0 bg-gradient-to-t lg:from-earth-900/70 lg:via-earth-900/20 lg:to-transparent from-earth-900/30  to-earth-900/10" />
       </div>
 
       {/* Vertically centred text block */}
@@ -74,7 +74,7 @@ export function Hero() {
       
 
       {/* Right-side scroll hint — desktop only */}
-      <div className="absolute w-full bottom-8 z-10 hidden lg:flex flex-col items-center gap-3">
+      <div className="absolute w-full bottom-28 z-10 hidden lg:flex flex-col items-center gap-3">
         <p
           className="text-[9px] tracking-[0.25em] uppercase text-beige-50/90 font-sans"
           style={{}}

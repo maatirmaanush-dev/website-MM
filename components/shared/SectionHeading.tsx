@@ -16,14 +16,14 @@ interface SectionHeadingProps {
 export function SectionHeading({
   eyebrow,
   title,
-  centered = false,
+  centered = true,
   className,
   as: Heading = 'h2',
 }: SectionHeadingProps) {
   return (
     <div className={cn(centered && 'text-center', className)}>
       {eyebrow && (
-        <p className="text-xs tracking-[0.2em] uppercase text-earth-500 font-sans mb-2">
+        <p className="text-xs text-center tracking-[0.2em] uppercase text-earth-500 font-sans mb-2">
           {eyebrow}
         </p>
       )}

@@ -61,7 +61,7 @@ export function ProductCard({ product, cta = 'enquire', priority = false }: Prod
       {/* Image */}
       <Link href={getProductUrl(product)} className="block">
         <div
-          className="relative w-[23vw] aspect-[3/4] overflow-hidden rounded-sm mb-4"
+          className="relative w-full lg:w-[23vw] aspect-[3/4] overflow-hidden rounded-sm mb-4"
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
         >

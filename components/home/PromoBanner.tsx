@@ -6,7 +6,7 @@ export function PromoBanner() {
       {/* Background image */}
       <div className="absolute top-[0px] inset-0">
         <ImageWithFallback
-          src="/images/hero/promo-banner6.png"
+          src="/images/hero/promo-banner7.png"
           alt="Maatir Maanush — Handcrafted Kantha"
           fill
           className="object-cover hidden sm:block"
@@ -16,7 +16,7 @@ export function PromoBanner() {
           fallbackAccent="#C4956A"
         />
         <ImageWithFallback
-          src="/images/hero/mob-promo-banner.png"
+          src="/images/hero/mob-promo-banner2.png"
           alt="Maatir Maanush — Handcrafted Kantha"
           fill
           className="object-cover block sm:hidden"
