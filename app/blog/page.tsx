@@ -61,7 +61,6 @@ export default async function BlogPage() {
             as="h1"
             eyebrow="Journal"
             title={h1}
-            subtitle={h2}
           />
         </AnimatedReveal>
 
