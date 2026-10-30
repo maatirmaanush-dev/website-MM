@@ -51,7 +51,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function BlogPage() {
   const [posts, seo] = await Promise.all([getBlogPosts(true), getSeoByPath('/blog')])
   const h1 = seo?.h1 || 'The Journal of Kantha Fashion & Style'
-  const h2 = seo?.h2 || 'Contemporary Fashion Inspired by Kantha'
+  // const h2 = seo?.h2 || 'Contemporary Fashion Inspired by Kantha'
 
   return (
     <main className="min-h-screen bg-beige-50 pt-20 sm:pt-32 pb-12 sm:pb-24 px-6 lg:px-10">
