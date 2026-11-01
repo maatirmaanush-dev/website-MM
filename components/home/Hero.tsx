@@ -17,7 +17,7 @@ export function Hero() {
           fallbackAccent="#C4956A"
         />
         <ImageWithFallback
-          src="/images/diwali/banners/mob-diwali-banner3.png"
+          src="/images/diwali/banners/mob-diwali-banner5.png"
           alt="Maatir Maanush — Handcrafted Kantha"
           fill
           className="object-cover block sm:hidden"
