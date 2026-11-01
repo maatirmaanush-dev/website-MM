@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="relative lg:items-end lg:justify-start md:justify-center flex items-end justify-end overflow-hidden bg-earth-900">
       {/* Background image */}
-      <div className="flex max-w-full w-full aspect-[9/16] lg:aspect-[16/9]">
+      <div className="flex max-w-full w-full aspect-[8/16] lg:aspect-[16/9]">
         <ImageWithFallback
           src="/images/diwali/banners/diwali-banner2.png"
           alt="Maatir Maanush — Handcrafted Kantha"

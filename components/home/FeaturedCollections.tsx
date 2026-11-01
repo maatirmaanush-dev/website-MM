@@ -17,14 +17,14 @@ export async function FeaturedCollections() {
         <img src="/images/diwali/elements/corner-designs.png" alt="Diwali background" className="absolute z-[-1] top-[-200px] right-[-200px] w-[30vw] opacity-50 object-cover object-center" />
         {/* <img src="/images/diwali/elements/corner-designs.png" alt="Diwali background" className="absolute bottom-[-100px] left-[-100px] opacity-50 w-[15vw] z-[-1] object-cover object-center" /> */}
       </div>
-      <AnimatedReveal className="flex flex-col items-center justify-center gap-6 mb-8 sm:mb-14">
+      <AnimatedReveal className="flex flex-col lg:flex-row items-center lg:items-end justify-center gap-10 mb-8 sm:mb-14">
         <SectionHeading
           eyebrow="Curated"
           title="From Our Collections"
         />
         <Link
           href={NEW_DROPS_PATH}
-          className="text-[12px] bg-[#511306] border border-[#511306] rounded-sm px-4 py-2 font-sans text-[#f5f7f4] hover:bg-[#51130678] transition-colors duration-200 shrink-0"
+          className="text-[12px] bg-[#511306] border border-2 px-4 py-2 font-sans text-[#f5f4f7] hover:bg-[#51130678] transition-colors duration-200 shrink-0"
         >
           View all pieces →
         </Link>

@@ -6,10 +6,10 @@ import { getPublishedCategories, getCategoryImages } from '@/lib/actions/product
 import { NEW_DROPS_PATH } from '@/lib/site-links'
 
 const ALL_CATEGORIES = [
-  { label: 'Sarees',           href: '/kantha-stitch-sarees',       dbCategory: 'Kantha Stitch Sarees', image: '/images/diwali/categories/saree4.png', pinnedImage: '/images/diwali/categories/saree4.png', hovName: 'Festive Saree' },
+  { label: 'Sarees',           href: '/kantha-stitch-sarees',       dbCategory: 'Kantha Stitch Sarees', image: '/images/diwali/categories/saree4.png', pinnedImage: '/images/diwali/categories/saree4.png', hovName: 'Festive Sarees' },
   { label: 'Jackets',          href: '/kantha-embroidered-jackets',  dbCategory: 'Kantha Jackets',        image: '/images/diwali/categories/jacket3.png', pinnedImage: '/images/diwali/categories/jacket3.png', hovName: 'Festive Jackets' },
   { label: 'Dresses',          href: '/contemporary-womens-wear',    dbCategory: 'Dresses',               image: '/images/diwali/categories/dresses3.png', pinnedImage: '/images/diwali/categories/dresses3.png', hovName: 'Festive Dresses' },
-  { label: 'Kurtas',           href: '/kantha-embroidered-kurtas',   dbCategory: 'Kurtas',                image: '/images/diwali/categories/kurtas4.png', pinnedImage: '/images/diwali/categories/kurtas4.png', hovName: 'Festive Kurta' },
+  { label: 'Kurtas',           href: '/kantha-embroidered-kurtas',   dbCategory: 'Kurtas',                image: '/images/diwali/categories/kurtas4.png', pinnedImage: '/images/diwali/categories/kurtas4.png', hovName: 'Festive Kurtas' },
   { label: 'Kaftans',          href: '/kaftans-for-women',           dbCategory: 'Kaftans',               image: '/images/diwali/categories/kaftan4.png', pinnedImage: '/images/diwali/categories/kaftan4.png', hovName: 'Festive Kaftans' },
   { label: 'Limited Editions', href: '/limited-editions-clothing',   dbCategory: 'Limited Editions',      image: '/images/diwali/categories/limited2.png', pinnedImage: '/images/diwali/categories/limited2.png', hovName: 'Festive Limited Editions' },
   { label: 'Skirts', href: '/skirts',   dbCategory: 'Skirts',      image: '/images/diwali/categories/skirts2.png', pinnedImage: '/images/diwali/categories/skirts2.png', hovName: 'Festive Skirts' },
@@ -24,7 +24,7 @@ export async function NewDropsSection() {
   // const activeCategories = ALL_CATEGORIES;
 
   return (
-    <section className="py-12 sm:py-24 px-4 lg:px-10 bg-beige-50">
+    <section className="pt-12 sm:pt-24 sm:pb-10 px-4 lg:px-10 bg-beige-50">
       <div className="max-w-8xl mx-auto">
         <AnimatedReveal className="flex items-center justify-center w-full mb-8 px-2 sm:mb-10">
           <SectionHeading

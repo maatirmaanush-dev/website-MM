@@ -17,7 +17,7 @@ interface SectionHeadingProps {
 export function SectionHeading({
   eyebrow,
   title,
-  centered = false,
+  centered = true,
   subtitle,
   className,
   as: Heading = 'h2',
