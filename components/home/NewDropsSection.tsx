@@ -6,13 +6,13 @@ import { getPublishedCategories, getCategoryImages } from '@/lib/actions/product
 import { NEW_DROPS_PATH } from '@/lib/site-links'
 
 const ALL_CATEGORIES = [
-  { label: 'Sarees',           href: '/kantha-stitch-sarees',       dbCategory: 'Kantha Stitch Sarees', image: '/images/diwali/categories/saree4.png', pinnedImage: '/images/diwali/categories/saree4.png', hovName: 'Festive Sarees' },
-  { label: 'Jackets',          href: '/kantha-embroidered-jackets',  dbCategory: 'Kantha Jackets',        image: '/images/diwali/categories/jacket3.png', pinnedImage: '/images/diwali/categories/jacket3.png', hovName: 'Festive Jackets' },
-  { label: 'Dresses',          href: '/contemporary-womens-wear',    dbCategory: 'Dresses',               image: '/images/diwali/categories/dresses3.png', pinnedImage: '/images/diwali/categories/dresses3.png', hovName: 'Festive Dresses' },
-  { label: 'Kurtas',           href: '/kantha-embroidered-kurtas',   dbCategory: 'Kurtas',                image: '/images/diwali/categories/kurtas4.png', pinnedImage: '/images/diwali/categories/kurtas4.png', hovName: 'Festive Kurtas' },
-  { label: 'Kaftans',          href: '/kaftans-for-women',           dbCategory: 'Kaftans',               image: '/images/diwali/categories/kaftan4.png', pinnedImage: '/images/diwali/categories/kaftan4.png', hovName: 'Festive Kaftans' },
-  { label: 'Limited Editions', href: '/limited-editions-clothing',   dbCategory: 'Limited Editions',      image: '/images/diwali/categories/limited2.png', pinnedImage: '/images/diwali/categories/limited2.png', hovName: 'Festive Limited Editions' },
-  { label: 'Skirts', href: '/skirts',   dbCategory: 'Skirts',      image: '/images/diwali/categories/skirts2.png', pinnedImage: '/images/diwali/categories/skirts2.png', hovName: 'Festive Skirts' },
+  { label: 'Sarees',           href: '/kantha-stitch-sarees',       dbCategory: 'Kantha Stitch Sarees', image: '/images/diwali/categories/D1.png', pinnedImage: '/images/diwali/categories/D1.png', hovName: 'Festive Sarees' },
+  { label: 'Jackets',          href: '/kantha-embroidered-jackets',  dbCategory: 'Kantha Jackets',        image: '/images/diwali/categories/jackets2.png', pinnedImage: '/images/diwali/categories/jackets2.png', hovName: 'Festive Jackets' },
+  { label: 'Dresses',          href: '/contemporary-womens-wear',    dbCategory: 'Dresses',               image: '/images/diwali/categories/dresses-normal.png', pinnedImage: '/images/diwali/categories/dresses-normal.png', hovName: 'Festive Dresses' },
+  { label: 'Kurtas',           href: '/kantha-embroidered-kurtas',   dbCategory: 'Kurtas',                image: '/images/diwali/categories/D14,png', pinnedImage: '/images/diwali/categories/D14.png', hovName: 'Festive Kurtas' },
+  { label: 'Kaftans',          href: '/kaftans-for-women',           dbCategory: 'Kaftans',               image: '/images/diwali/categories/1.png', pinnedImage: '/images/diwali/categories/1.png', hovName: 'Festive Kaftans' },
+  { label: 'Limited Editions', href: '/limited-editions-clothing',   dbCategory: 'Limited Editions',      image: '/images/diwali/categories/limited-normal.png', pinnedImage: '/images/diwali/categories/limited-normal.png', hovName: 'Festive Limited Editions' },
+  { label: 'Skirts', href: '/skirts',   dbCategory: 'Skirts',      image: '/images/diwali/categories/skirts-normal.png', pinnedImage: '/images/diwali/categories/skirts-normal.png', hovName: 'Festive Skirts' },
 ]
 
 export async function NewDropsSection() {
@@ -71,7 +71,7 @@ export async function NewDropsSection() {
                 <div className="relative w-full overflow-hidden rounded-sm h-[250px] lg:h-[510px]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <Image
-                      src="/images/diwali/categories/alldrops2.png"
+                      src="/images/diwali/categories/all-normal.png"
                       alt="All Drops"
                       fill
                       className="object-cover object-top transition-transform duration-300 group-hover:scale-[102%]"

@@ -7,7 +7,7 @@ export function Hero() {
       {/* Background image */}
       <div className="flex max-w-full w-full aspect-[8/16] lg:aspect-[16/9]">
         <ImageWithFallback
-          src="/images/diwali/banners/diwali-banner2.png"
+          src="/images/hero/hero-head.png"
           alt="Maatir Maanush — Handcrafted Kantha"
           fill
           className="object-contain w-full h-full hidden sm:block"
@@ -17,11 +17,11 @@ export function Hero() {
           fallbackAccent="#C4956A"
         />
         <ImageWithFallback
-          src="/images/diwali/banners/mob-diwali-banner5.png"
+          src="/images/hero/hero-head-mobile.png"
           alt="Maatir Maanush — Handcrafted Kantha"
           fill
           className="object-cover block sm:hidden"
-          style={{ objectPosition: '55% 50%' }}
+          style={{ objectPosition: '50% 50%' }}
           priority
           fallbackBg="#4A3020"
           fallbackAccent="#C4956A"
@@ -31,7 +31,7 @@ export function Hero() {
       </div>
 
       {/* Vertically centred text block */}
-      <div className="absolute opacity-0 inset-0 z-10 flex items-center px-8 lg:px-14">
+      <div className="absolute opacity-0 inset-0 z-10 flex items-center justify-center px-8 lg:px-14">
         <div className="max-w-xl">
           {/* Eyebrow */}
           <p className="text-[10px] tracking-[0.35em] uppercase text-beige-50/50 font-sans mb-5">
