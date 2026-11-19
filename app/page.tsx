@@ -5,7 +5,6 @@ import { FeaturedCollections } from '@/components/home/FeaturedCollections'
 import { NewDropsSection } from '@/components/home/NewDropsSection'
 import { UnboxingOurselves } from '@/components/home/UnboxingOurselves'
 import { BrandEthos } from '@/components/home/BrandEthos'
-import { PromoBanner } from '@/components/home/PromoBanner'
 import { CraftProcess } from '@/components/home/CraftProcess'
 import { GalleryStrip } from '@/components/home/GalleryStrip'
 import { HomeBlog } from '@/components/home/HomeBlog'
@@ -35,7 +34,7 @@ export default function HomePage() {
     <main>
       <Hero />
       <FeaturedCollections />
-      <PromoBanner />
+      {/* <PromoBanner /> */}
       <NewDropsSection />
       <UnboxingOurselves />
       <BrandEthos />
