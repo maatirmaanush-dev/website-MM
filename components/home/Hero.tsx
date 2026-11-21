@@ -1,5 +1,5 @@
 import { ImageWithFallback } from '@/components/shared/ImageWithFallback'
-import { Link } from 'lucide-react'
+import Link from 'next/link'
 
 export function Hero() {
   return (
@@ -7,7 +7,7 @@ export function Hero() {
       {/* Background image */}
       <div className="flex max-w-full w-full aspect-[8/16] lg:aspect-[16/9]">
         <ImageWithFallback
-          src="/images/hero/hero-head.png"
+          src="/images/hero/hero-head-f3.png"
           alt="Maatir Maanush — Handcrafted Kantha"
           fill
           className="object-contain w-full h-full hidden sm:block"
@@ -17,7 +17,7 @@ export function Hero() {
           fallbackAccent="#C4956A"
         />
         <ImageWithFallback
-          src="/images/hero/hero-head-mobile.png"
+          src="/images/hero/hero-head-mf2.png"
           alt="Maatir Maanush — Handcrafted Kantha"
           fill
           className="object-cover block sm:hidden"
@@ -27,11 +27,11 @@ export function Hero() {
           fallbackAccent="#C4956A"
         />
         {/* Darkening layers */}
-        <div className="absolute inset-0 bg-gradient-to-t lg:from-earth-900/70 lg:via-earth-900/20 lg:to-transparent from-earth-900/30  to-earth-900/10" />
+        <div className="absolute inset-0 bg-gradient-to-t lg:from-earth-900/70 lg:via-earth-900/20 lg:to-transparent from-earth-900/60  to-earth-900/10" />
       </div>
 
       {/* Vertically centred text block */}
-      <div className="absolute opacity-0 inset-0 z-10 flex items-center justify-center px-8 lg:px-14">
+      <div className="absolute w-full inset-0 z-10 flex items-end lg:items-center pb-24 justify-start px-8 lg:px-14">
         <div className="max-w-xl">
           {/* Eyebrow */}
           <p className="text-[10px] tracking-[0.35em] uppercase text-beige-50/50 font-sans mb-5">
@@ -60,13 +60,13 @@ export function Hero() {
               href="/new-drops"
               className="inline-block text-center bg-beige-50 text-earth-900 font-sans text-xs tracking-[0.18em] uppercase px-8 py-3.5 hover:bg-beige-200 transition-all duration-300"
             >
-              Explore New Drops
+              <p>Explore New Drops</p>
             </Link>
             <Link
               href="/the-art-of-kantha"
               className="inline-block text-center border border-beige-50/40 text-beige-50/80 font-sans text-xs tracking-[0.18em] uppercase px-8 py-3.5 hover:border-beige-50/80 hover:text-beige-50 transition-all duration-300"
             >
-              The Art of Kantha
+              <p>The Art of Kantha</p>  
             </Link>
           </div>
         </div>
