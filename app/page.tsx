@@ -10,6 +10,7 @@ import { GalleryStrip } from '@/components/home/GalleryStrip'
 import { HomeBlog } from '@/components/home/HomeBlog'
 import { ReviewsSection } from '@/components/home/ReviewsSection'
 import { HomeFAQ } from '@/components/home/HomeFAQ'
+import { SubscribePopup } from '@/components/home/SubscribePopup'
 
 export const revalidate = 60
 
@@ -43,6 +44,7 @@ export default function HomePage() {
       <HomeBlog />
       <ReviewsSection />
       <HomeFAQ />
+      <SubscribePopup />
     </main>
   )
 }
