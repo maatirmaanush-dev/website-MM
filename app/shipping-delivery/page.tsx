@@ -3,6 +3,9 @@ import { getSeoByPath } from '@/lib/actions/seo'
 import { AnimatedReveal } from '@/components/shared/AnimatedReveal'
 import { PageFAQ } from '@/components/shared/PageFAQ'
 
+// Re-render at most once a minute so admin edits (SEO, products) show up.
+export const revalidate = 60
+
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await getSeoByPath('/shipping-delivery')
   const title = seo?.title || `Shipping & Delivery | Maatir Maanush`

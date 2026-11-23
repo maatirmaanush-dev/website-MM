@@ -8,6 +8,9 @@ import { PageFAQ } from '@/components/shared/PageFAQ'
 import { NEW_DROPS_PATH } from '@/lib/site-links'
 import { categoryRobotsMeta } from '@/lib/category-meta'
 
+// Re-render at most once a minute so admin edits (SEO, products) show up.
+export const revalidate = 60
+
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await getSeoByPath('/tops')
   const title = seo?.title || `Kantha Tops - Maatir Maanush`

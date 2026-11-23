@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -64,9 +65,12 @@ export function Navbar() {
         <div className="hidden lg:flex items-center justify-between">
           {/* Left: Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/images/logo-icon.png"
+              width={345}
+              height={231}
+              sizes="72px"
+              priority
               alt="Maatir Maanush"
               className={cn('h-11 w-auto transition-all duration-300', scrolled ? '' : 'brightness-0 invert')}
             />
@@ -142,9 +146,12 @@ export function Navbar() {
         {/* Mobile */}
         <div className="flex lg:hidden items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/images/logo-icon.png"
+              width={345}
+              height={231}
+              sizes="72px"
+              priority
               alt="Maatir Maanush"
               className={cn('h-7 w-auto transition-all duration-300', scrolled ? '' : 'brightness-0 invert')}
             />

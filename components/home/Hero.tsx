@@ -1,31 +1,34 @@
-import { ImageWithFallback } from '@/components/shared/ImageWithFallback'
+import { getImageProps } from 'next/image'
 import Link from 'next/link'
+import { NEW_DROPS_PATH } from '@/lib/site-links'
+
+const HERO_ALT = 'Maatir Maanush — Handcrafted Kantha'
 
 export function Hero() {
+  // Art direction with <picture>: the browser downloads ONLY the image whose
+  // media query matches, instead of fetching both the desktop and the mobile
+  // hero and hiding one with CSS.
+  const common = { alt: HERO_ALT, fill: true, sizes: '100vw', priority: true }
+  const {
+    props: { srcSet: desktopSrcSet },
+  } = getImageProps({ ...common, src: '/images/hero/hero-head-f3.png' })
+  const {
+    props: { style, ...mobileProps },
+  } = getImageProps({ ...common, src: '/images/hero/hero-head-mf2.png' })
+
   return (
     <section className="relative lg:items-end lg:justify-start md:justify-center flex items-end justify-end overflow-hidden bg-earth-900">
       {/* Background image */}
       <div className="flex max-w-full w-full aspect-[8/16] lg:aspect-[16/9]">
-        <ImageWithFallback
-          src="/images/hero/hero-head-f3.png"
-          alt="Maatir Maanush — Handcrafted Kantha"
-          fill
-          className="object-contain w-full h-full hidden sm:block"
-          style={{ objectPosition: '70% top' }}
-          priority
-          fallbackBg="#4A3020"
-          fallbackAccent="#C4956A"
-        />
-        <ImageWithFallback
-          src="/images/hero/hero-head-mf2.png"
-          alt="Maatir Maanush — Handcrafted Kantha"
-          fill
-          className="object-cover block sm:hidden"
-          style={{ objectPosition: '50% 50%' }}
-          priority
-          fallbackBg="#4A3020"
-          fallbackAccent="#C4956A"
-        />
+        <picture>
+          <source media="(min-width: 640px)" srcSet={desktopSrcSet} sizes="100vw" />
+          {/* eslint-disable-next-line jsx-a11y/alt-text -- alt is in mobileProps */}
+          <img
+            {...mobileProps}
+            style={style}
+            className="object-cover object-[50%_50%] sm:object-contain sm:object-[70%_top]"
+          />
+        </picture>
         {/* Darkening layers */}
         <div className="absolute inset-0 bg-gradient-to-t lg:from-earth-900/70 lg:via-earth-900/20 lg:to-transparent from-earth-900/60  to-earth-900/10" />
       </div>
@@ -57,7 +60,7 @@ export function Hero() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
             <Link
-              href="/new-drops"
+              href={NEW_DROPS_PATH}
               className="inline-block text-center bg-beige-50 text-earth-900 font-sans text-xs tracking-[0.18em] uppercase px-8 py-3.5 hover:bg-beige-200 transition-all duration-300"
             >
               <p>Explore New Drops</p>

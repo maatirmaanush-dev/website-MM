@@ -6,6 +6,9 @@ import { PageFAQ } from '@/components/shared/PageFAQ'
 import { getSeoByPath } from '@/lib/actions/seo'
 import { getPublishedCategories, getCategoryImages } from '@/lib/actions/products'
 
+// Re-render at most once a minute so admin edits (SEO, products) show up.
+export const revalidate = 60
+
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await getSeoByPath('/new-drops')
   const title = seo?.title || 'New Drops — Maatir Maanush'
@@ -86,11 +89,13 @@ export default async function NewDropsPage() {
     <main className="min-h-screen bg-beige-50">
       {/* Header */}
       <div className="relative overflow-hidden bg-earth-900 flex items-center justify-center px-6 lg:px-10 pt-16 lg:pt-20" style={{ minHeight: '45dvh' }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/images/categories/new-drops-hero.jpg"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover object-[35%_0%] sm:object-[50%_0%]"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[35%_0%] sm:object-[50%_0%]"
         />
         <div className="absolute inset-0 bg-black/10" />
         <div className="relative w-full text-center">

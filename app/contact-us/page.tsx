@@ -5,6 +5,9 @@ import { buildGeneralWhatsAppUrl } from '@/lib/whatsapp'
 import { MessageCircle, Mail, Video } from 'lucide-react'
 import { PageFAQ } from '@/components/shared/PageFAQ'
 
+// Re-render at most once a minute so admin edits (SEO, products) show up.
+export const revalidate = 60
+
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await getSeoByPath('/contact-us')
   const title = seo?.title || `Contact Us | Maatir Maanush`

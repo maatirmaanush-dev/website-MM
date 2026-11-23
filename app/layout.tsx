@@ -5,7 +5,7 @@ import './globals.css'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { WhatsAppButton } from '@/components/shared/WhatsAppButton'
-import { headers } from 'next/headers'
+import { HideOnAdmin } from '@/components/layout/HideOnAdmin'
 import { jsonLd, organizationSchema } from '@/lib/structured-data'
 
 const playfair = Playfair_Display({
@@ -49,10 +49,6 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const headersList = headers()
-  const pathname = headersList.get('x-pathname') || ''
-  const isAdmin = pathname.startsWith('/admin')
-
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <head>
@@ -71,10 +67,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-beige-50 text-earth-900 antialiased">
-        {!isAdmin && <Navbar />}
+        <HideOnAdmin><Navbar /></HideOnAdmin>
         {children}
-        {!isAdmin && <Footer />}
-        {!isAdmin && <WhatsAppButton />}
+        <HideOnAdmin>
+          <Footer />
+          <WhatsAppButton />
+        </HideOnAdmin>
       </body>
     </html>
   )

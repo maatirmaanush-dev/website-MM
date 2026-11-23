@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { getSeoByPath } from '@/lib/actions/seo'
 import Link from 'next/link'
 import { AnimatedReveal } from '@/components/shared/AnimatedReveal'
@@ -7,6 +8,9 @@ import { buildGeneralWhatsAppUrl } from '@/lib/whatsapp'
 import { MessageCircle } from 'lucide-react'
 import { PageFAQ } from '@/components/shared/PageFAQ'
 import { NEW_DROPS_PATH } from '@/lib/site-links'
+
+// Re-render at most once a minute so admin edits (SEO, products) show up.
+export const revalidate = 60
 
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await getSeoByPath('/the-art-of-kantha')
@@ -64,10 +68,13 @@ export default function KanthaPage() {
       {/* Hero */}
       <div className="relative bg-earth-900 overflow-hidden" style={{ minHeight: '70vh' }}>
         {/* Background image */}
-        <img
+        <Image
           src="/images/about/kantha-hero.jpg"
           alt="Kantha artisan at work"
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
           style={{ objectPosition: '50% 5%' }}
         />
         {/* Overlays for text readability */}

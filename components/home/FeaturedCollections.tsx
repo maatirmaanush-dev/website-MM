@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { getProducts } from '@/lib/actions/products'
 import { ProductCard } from '@/components/products/ProductCard'
 import { SectionHeading } from '@/components/shared/SectionHeading'
@@ -14,7 +15,7 @@ export async function FeaturedCollections() {
   return (
     <section className="relative py-12 sm:py-24 px-10 mx-auto overflow-hidden max-w-[1600px]">
       <div className="absolute top-0 left-0 w-full h-full diwali-background">
-        <img src="/images/diwali/elements/corner-designs.png" alt="Diwali background" className="absolute z-[-1] top-[-200px] right-[-200px] w-[30vw] opacity-50 object-cover object-center" />
+        <Image src="/images/diwali/elements/corner-designs.png" alt="" width={1080} height={1080} sizes="30vw" className="absolute z-[-1] top-[-200px] right-[-200px] w-[30vw] h-auto opacity-50 object-cover object-center" />
         {/* <img src="/images/diwali/elements/corner-designs.png" alt="Diwali background" className="absolute bottom-[-100px] left-[-100px] opacity-50 w-[15vw] z-[-1] object-cover object-center" /> */}
       </div>
       <AnimatedReveal className="flex flex-col lg:flex-row items-center lg:items-end justify-center gap-10 mb-8 sm:mb-14">

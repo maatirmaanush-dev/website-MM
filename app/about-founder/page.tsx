@@ -6,6 +6,9 @@ import { AnimatedReveal } from '@/components/shared/AnimatedReveal'
 import { buildGeneralWhatsAppUrl } from '@/lib/whatsapp'
 import { NEW_DROPS_PATH } from '@/lib/site-links'
 
+// Re-render at most once a minute so admin edits (SEO, products) show up.
+export const revalidate = 60
+
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await getSeoByPath('/about-founder')
   const title = seo?.title || 'About the Founder — Geeti Bhojnagarwala | Maatir Maanush'

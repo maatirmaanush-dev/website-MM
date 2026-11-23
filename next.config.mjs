@@ -15,8 +15,9 @@ const nextConfig = {
         pathname: '/storage/v1/object/public/**',
       },
     ],
-    // Serve modern formats — AVIF then WebP
-    formats: ['image/avif', 'image/webp'],
+    // WebP only: AVIF is a little smaller but several times slower to encode,
+    // which made the first (uncached) request for each large image very slow.
+    formats: ['image/webp'],
     // Cache optimised images for 7 days
     minimumCacheTTL: 604800,
     // Sane set of device widths for responsive images

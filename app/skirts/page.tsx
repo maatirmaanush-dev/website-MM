@@ -7,6 +7,9 @@ import { categoryRobotsMeta } from '@/lib/category-meta'
 import { getProducts } from '@/lib/actions/products'
 import { ProductGrid } from '@/components/products/ProductGrid'
 
+// Re-render at most once a minute so admin edits (SEO, products) show up.
+export const revalidate = 60
+
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await getSeoByPath('/skirts')
   const title = seo?.title || `Kantha Skirts - Maatir Maanush`

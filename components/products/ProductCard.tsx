@@ -70,7 +70,7 @@ export function ProductCard({ product, cta = 'enquire', priority = false }: Prod
             alt={product.name}
             fill
             className={`object-cover transition-all duration-500 ease-premium ${soldOut ? 'grayscale-[40%] opacity-80' : ''}`}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             priority={priority && idx === 0}
             fallbackLabel={product.name}
             fallbackBg={colors.bg}

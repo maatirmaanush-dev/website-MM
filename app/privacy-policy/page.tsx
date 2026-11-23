@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import { getSeoByPath } from '@/lib/actions/seo'
 import { AnimatedReveal } from '@/components/shared/AnimatedReveal'
 
+// Re-render at most once a minute so admin edits (SEO, products) show up.
+export const revalidate = 60
+
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await getSeoByPath('/privacy-policy')
   const title = seo?.title || `Privacy Policy | Maatir Maanush`

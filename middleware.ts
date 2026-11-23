@@ -18,11 +18,7 @@ async function getRenamedRows(supabase: ReturnType<typeof createServerClient>): 
 }
 
 export async function middleware(request: NextRequest) {
-  // Inject pathname so layout can detect admin routes
-  const requestHeaders = new Headers(request.headers)
-  requestHeaders.set('x-pathname', request.nextUrl.pathname)
-
-  let supabaseResponse = NextResponse.next({ request: { headers: requestHeaders } })
+  let supabaseResponse = NextResponse.next({ request })
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -96,5 +92,8 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
+  // Pages only. Skip Next internals, API routes, /images and any request for a
+  // file with an extension (images, fonts, robots.txt, sitemap.xml, icons...),
+  // so asset requests don't pay for a Supabase client + SEO lookup.
+  matcher: ['/((?!_next/|api/|images/|favicon.ico|.*\\.[a-zA-Z0-9]+$).*)'],
 }

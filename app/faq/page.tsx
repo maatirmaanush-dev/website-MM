@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import { getSeoByPath } from '@/lib/actions/seo'
 import FaqContent from '@/components/faq/FaqContent'
 
+// Re-render at most once a minute so admin edits (SEO, products) show up.
+export const revalidate = 60
+
 // This page used to be a single 'use client' file, which meant it could not export
 // metadata — it inherited the site-wide title/description from the root layout and
 // shipped no canonical at all. The interactive accordion now lives in FaqContent.
