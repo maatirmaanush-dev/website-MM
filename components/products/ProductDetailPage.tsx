@@ -277,11 +277,12 @@ export function createProductDetailPage(category: string) {
     )
   }
 
-  // generateStaticParams already enumerates every valid slug for this category, so
-  // any other slug is definitionally not-found — dynamicParams: false makes Next.js
-  // 404 those immediately at the routing layer without ever invoking the page. This
-  // also avoids on-demand fallback rendering here, which crashes with
-  // DYNAMIC_SERVER_USAGE (calling the 'use server' data-fetch action outside the
-  // build-time static list is incompatible with that render path).
-  return { default: ProductDetailPage, generateStaticParams, generateMetadata, dynamicParams: false, revalidate: 60 }
+  // generateStaticParams prebuilds the products that exist at deploy time.
+  // dynamicParams: true lets a product added in the admin AFTER the deploy render
+  // on its first visit (then it is cached and revalidated like the others) —
+  // with `false` every new product 404'd until the next deploy.
+  // Unknown slugs, unpublished products and wrong-category URLs still 404 via
+  // loadProduct() -> notFound(). Data comes from lib/data/products (plain
+  // functions, not Server Actions), so on-demand rendering is safe here.
+  return { default: ProductDetailPage, generateStaticParams, generateMetadata, dynamicParams: true, revalidate: 60 }
 }
